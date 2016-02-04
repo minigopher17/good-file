@@ -22,6 +22,8 @@ Creates a new GoodFile object where:
 	- `String` - a string that indicates the log file to use. Opened in "append" mode.
 	- `Object` - a configuration object for automatically generated files. Auto generated files use the following pattern for file naming: "{`options.prefix`}-{utcTime.format(`options.format`)}-{random string}.{`settings.extension`}"
 	 	- `path` - required. Path to the directory to store log files.
+	 	- `[timestampFormat]` - a [MomentJs](http://momentjs.com/docs/#/displaying/format/) format string for the event. Defaults to ISO 8601 format.
+	 	- `[utc]` - boolean controlling Moment using [utc mode](http://momentjs.com/docs/#/parsing/utc/) or not. Defaults to `true`.
 	 	- `[format]` - a [MomentJs](http://momentjs.com/docs/#/displaying/format/) format string. Defaults to "YYYY-MM-DD".
 	 	- `[extension]` - file extension to use when creating a file. Defaults to ".log". Set to "" for no extension.
 	 	- `[prefix]` - file name prefix to use when creating a file. Defaults to "good-file"
